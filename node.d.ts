@@ -931,12 +931,12 @@ declare module "crypto" {
     export function createHash(algorithm: string): Hash;
     export function createHmac(algorithm: string, key: string): Hmac;
     export interface Hash {
-        update(data: any, input_encoding?: string): void;
+        update(data: any, input_encoding?: string): Hash;
         digest(encoding?: string): any;
     }
     export interface Hmac {
-        update(data: any): void;
-        digest(encoding?: string): void;
+        update(data: any): Hmac;
+        digest(encoding?: string): any;
     }
     export function createCipher(algorithm: string, password: any): Cipher;
     export function createCipheriv(algorithm: string, key: any, iv: any): Cipher;
