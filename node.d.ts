@@ -932,7 +932,7 @@ declare module "crypto" {
     export function createHmac(algorithm: string, key: string): Hmac;
     export interface Hash {
         update(data: any, input_encoding?: string): void;
-        digest(encoding?: string): string;
+        digest(encoding?: string): any;
     }
     export interface Hmac {
         update(data: any): void;
